@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>splash water effect</title>
+    <style>
+        section{
+            max-width: 1174px; background: black; margin:auto;
+            position: relative; transition: 0.7s; overflow: hidden;
+        }
+        h1 {display:none;}
+        img {display: block;}
+        img:first-of-type {margin:0 0 0 auto; animation:fade 1.5s both;}
+        img:last-of-type {position:absolute; top:0; left:6%; animation:long 2s 0.5s both; z-index: 1;}
+
+        @keyframes fade {
+            0%   {opacity: 0; margin-right:-100px;}
+            100% {opacity:1; margin-right:0;}
+        }
+        @keyframes long {
+            0%   {opacity:0; left:150px;}
+            100% {opacity:1; left:6%;}
+        }
+
+        section:hover {background: gray;}
+        section img{transition: 0.5s;}
+        section:hover img {filter:blur(5px) hue-rotate(80deg); transform: scaleX(1.1);}
+    </style>
+</head>
+<body>
+    <section>
+        <h1>splash water effect and girl</h1>
+        <div>
+            <img src="images/girl.png" alt="여자">
+            <img src="images/splash.png" alt="splash water">
+        </div>
+    </section>
+</body>
+</html>
